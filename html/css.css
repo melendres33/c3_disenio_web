@@ -30,7 +30,7 @@ body {
   pointer-events: none;
 }
 
-/* Sección informativa alineada */
+/* Sección Informativa */
 .info-section {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +69,7 @@ body {
   border-radius: 10px;
 }
 
-/* Sección Gama de Mercedes-Benz */
+/* Galería */
 .gallery-section {
   max-width: 1000px;
   margin: auto;
@@ -96,7 +96,9 @@ body {
 }
 
 .car-item img {
-  width: 100%;
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -111,14 +113,8 @@ body {
   font-size: 1em;
   color: #444;
 }
-.car-item img {
-  width: 220px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
+
+/* Sucursales y Talleres */
 .map-section {
   padding: 50px 30px;
   background-color: #f7f7f7;
@@ -129,6 +125,8 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .map-item {
@@ -146,4 +144,31 @@ body {
 
 .full-width {
   grid-column: 1 / span 2;
+}
+
+.map-item a.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 18px;
+  background-color: #d8e3e7;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.map-item a.contact-btn:hover {
+  background-color: #c1d4d8;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .map-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-item {
+    margin-bottom: 20px;
+  }
 }
